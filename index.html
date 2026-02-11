@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Rose Day Aakriti 🌹</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #ffb6c1, #6b0015);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🌹 Main rose container */
+.rose-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+/* 🌹 Center rose */
+.center-rose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 140px;
+    animation: pulse 3s infinite;
+    filter: drop-shadow(0 0 25px rgba(255,0,0,0.7));
+    z-index: 3;
+}
+
+/* 🖼️ Photo petals */
+.petal {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.7);
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    animation: float 6s ease-in-out infinite;
+}
+
+.petal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🌸 Position petals like a rose */
+.p1 { top: 0%; left: 50%; transform: translate(-50%, 0); }
+.p2 { top: 20%; left: 80%; }
+.p3 { top: 55%; left: 90%; }
+.p4 { top: 80%; left: 50%; transform: translate(-50%, 0); }
+.p5 { top: 55%; left: 0%; }
+.p6 { top: 20%; left: 10%; }
+
+/* ✨ Animations */
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.12); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 💖 Text */
+.text {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Music -->
+<audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div onclick="playMusic()">
+
+    <div class="rose-container">
+        <div class="center-rose">🌹</div>
+
+        <!-- 🖼️ Photo petals -->
+        <div class="petal p1"><img src="aee.jpg"></div>
+        <div class="petal p2"><img src="aqq.jpg"></div>
+        <div class="petal p3"><img src="AA.jpg"></div>
+        <div class="petal p4"><img src="att.jpg"></div>
+        <div class="petal p5"><img src="aww.jpg"></div>
+        <div class="petal p6"><img src="aatt.jpg"></div>
+    </div>
+
+    <div class="text">
+        <h1>Happy Rose Day</h1>
+        <p>Aakru,Keeping Shining the way you are</p>
+        <p style="font-size:14px;opacity:0.7;"> </p>
+    </div>
+
+</div>
+
+<script>
+function playMusic() {
+    document.getElementById("bgm").play();
+}
+</script>
+
+</body>
+</html>
